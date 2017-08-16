@@ -3,15 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>hello vue</title>
+        <script src="https://unpkg.com/vue"></script>
         <script type="text/javascript" src="static/js/index.js"></script>
         <link rel="stylesheet" href="static/css/index.css">
     </head>
     <body>
+        <h1>vue js demo</h1>
         <div class="content" id="content">
-            hello! my firends!hllp
-            asdfas !daf
-            haha
+            <div>content is :{{content}}</div>
+            <div>capital content is :{{capContent}}</div>
+            <br>
+            <div>非响应式依赖==> nowt:{{nowt}}</div>
+            <br>
+            <div class="para" v-if="seen">
+                我是段落
+            </div>
+            <ul v-on:click="changeContent">
+                <li v-for="l in list">{{l.name | reverseMess}}</li>
+            </ul>
+            <br>
         </div>
-        <h1>haopengy</h1>
+        <div class="list-component" id="list">
+            <list-item v-for="l in listdatas" v-bind:todo="l"></list-item>
+        </div>
     </body>
 </html>
