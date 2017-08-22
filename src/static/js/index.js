@@ -34,13 +34,35 @@ window.onload = function(){
             'nowt':function(){
                 return new Date().getTime();
             }
+        },
+        components:{
+            'list-li':{
+                props:['iname'],
+                template:'<span>{{iname.name}}</span>'
+            }
         }
 
     });
     // 组件
+    // 小型vue实例，具备vue实例大部分功能-computed,methods,data
     Vue.component('list-item',{
         props:['todo'],
-        template:'<div class="items">{{todo.name}}</div>'
+        template:'<div class="items" @click="change"><span style="color:red;">{{newmess}}</span>{{todo.name}}<span>---{{message}}</span></div>',
+        data:function(){
+            return {
+                message:'note'
+            }
+        },
+        methods:{
+            change:function(){
+                this.message += '1';
+            }
+        },
+        computed:{
+            'newmess':function(){
+                return this.message+'2';
+            }
+        }
     });
     var list = new Vue({
         el:"#list",
@@ -52,4 +74,6 @@ window.onload = function(){
             ]
         }
     });
+    // 父子组件数据双向传递规则：
+    // 父组件props down数据给子组件，而子组件则event通知父组件执行其他操作，即子组件通过触发绑定在自己模板上的事件来执行绑定在事件上的父组件方法。
 }

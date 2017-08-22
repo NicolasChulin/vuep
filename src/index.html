@@ -22,6 +22,12 @@
                 <li v-for="l in list">{{l.name | reverseMess}}</li>
             </ul>
             <br>
+            <div class="">
+                list-li  show
+            </div>
+            <div class="list-lis">
+                <list-li v-for="li in list" :iname="li"></list-li>
+            </div>
         </div>
         <div class="list-component" id="list">
             <list-item v-for="l in listdatas" v-bind:todo="l"></list-item>
