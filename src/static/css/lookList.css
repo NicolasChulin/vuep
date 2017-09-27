@@ -1,0 +1,311 @@
+
+.header-w .lookList {
+  background-color: #fff;
+}
+.header-w .lookList .look_box {
+  width: 1250px;
+  height: 1250px;
+  padding-left: 65px;
+  margin: 0 auto;
+  margin-top:80px;
+}
+.header-w .lookList .look_box .lookImg {
+  margin: 30px 10px;
+  float: left;
+  width: 24%;
+  width: 270px;
+  height: 460px;
+}
+.header-w .lookList .look_box .lookImg .look_png {
+  width: 100%;
+  padding-bottom: 135.24%;
+  position: relative;
+  overflow: hidden;
+}
+.header-w .lookList .look_box .lookImg .look_png > img {
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header-w .lookList .look_box .lookImg > h4 {
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  line-height: 45px;
+  font-family: "Microsoft YaHei";
+  color:rgba(51, 51, 51, 0.9);
+}
+.header-w .lookList .look_box .lookImg > p {
+  width: 80%;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(102, 102, 102);
+   font-family: "Microsoft YaHei";
+}
+/*#content{
+  height: 3000px;
+  width: 750px;
+  position: absolute;
+  top: 40px;
+  left: 25px;
+  padding-bottom: 100px;
+}*/
+   
+ #modal-13 .md-content> button {
+  right: 45px;
+  width: 65px;
+  height: 65px;
+  background: url(../images/5look.png) no-repeat;
+  top: 0;
+  color: #fff;
+  border: 0;
+  position: fixed;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_prouct > p {
+  font-size: 16px;
+  color:#000;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: "Cursive";
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_prouct .look_like > a {
+  margin-right: 30px;
+  line-height: 35px;
+  font-family: "Cursive";
+}
+.look_like .like_time{
+  background: url(../images/time.png) no-repeat 0px 0px;
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  vertical-align: middle;
+
+}
+.look_like .like_eye{
+  background: url(../images/time.png) no-repeat 0px -16px;
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  vertical-align: middle;
+}
+.look_nav{
+
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_nav .look_n {
+  position: relative;
+  width: 100%;
+  float: left;
+  height: 1200px;
+
+  border-bottom: 1px solid #ddd; 
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_nav .look_n .look_i {
+  width: 100%;
+  padding-bottom: 135.4%;
+  position: relative;
+  overflow: hidden;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_nav .look_n .look_i > img {
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_nav .look_n .look_i .gif_bottom {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  line-height: 48px;
+  height: 48px;
+  background: rgba(35, 35, 35, 0.5);
+}
+.gif_bottom .gif_b{
+  position: absolute;
+  top：0px;
+  right: 20px;
+  color: #fff;
+}
+.gif_bottom .gif_a{
+  position: absolute;
+  top：0px;
+  left: 20px;
+  color: #fff;
+}
+.gif_bottom .gif_l{
+  display: inline-block;
+  background: url(../images/look_love.png) no-repeat 0px 0px;
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.gif_bottom .gif_f{
+  background: url(../images/look_love.png) no-repeat 0px -16px;
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt {
+  width: 100%;
+ /*  height: 536px; */
+  border-bottom: 1px solid #ddd; 
+
+}
+.look_pt>h4{
+  line-height: 60px;
+  margin-left: 12px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Cursive";
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt .look_g {
+  position: relative;
+  width: 30.33%;
+  float: left;
+  height: 405px;
+  margin: 10px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #eee;
+
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt .look_g .look_gif {
+  width: 100%;
+  padding-bottom: 135.4%;
+  position: relative;
+  overflow: hidden;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt .look_g .look_gif > img {
+  padding: 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt .look_g .look_pay {
+ 
+  height: 92px;
+}
+.look_g .look_pay>p{
+  font-size: 14px;
+  color: #213e3e;
+  font-weight: 700px;
+  line-height: 28px;
+  margin-left:12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt .look_g .look_pay .money {
+  position: absolute;
+  font-size: 13px;
+  line-height: 26px;
+  bottom: 10px;
+  left: 12px;
+  color: #ec9182;
+}
+.header-w #modal-13 .md-content .look_bl .lookDetial .look_pt .look_g .look_pay .order {
+  position: absolute;
+  bottom: 10px;
+  right: 1px;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background-color: #ec9083;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.header-w .footer {
+  height: 380px;
+  background-color: #fff;
+}
+.header-w .footer .footer_nav {
+  width: 700px;
+  height: 260px;
+  margin: 0 auto;
+  padding-top: 75px;
+}
+.header-w .footer .footer_nav .footer_ew {
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin-left: 60px;
+}
+.header-w .footer .footer_nav .footer_ew > li {
+  float: left;
+  padding-left: 90px;
+}
+.header-w .footer .footer_nav .footer_ew > li > a {
+  display: block;
+  width: 162px;
+  height: 162px;
+}
+.header-w .footer .footer_nav .footer_ew > li > a > img {
+  width: 100%;
+  height: 100%;
+}
+.header-w .footer .footer_nav .footer_ew > li > span {
+  display: block;
+  font-size: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
+}
+.header-w .footer .footer_nav .links {
+  text-align: center;
+  padding-bottom: 16px;
+  font-size: 14px;
+}
+.header-w .footer .footer_nav .links > a {
+  margin-bottom: 30px;
+}
+.header-w .footer .footer_nav .links > span {
+  margin: 0 10px;
+}
+.header-w .footer .footer_nav .links > p {
+  margin: 6px 0;
+}
+#modal-13{
+  left:43.333%;
+  top:50%;
+}
+.look_bl .look_pl{
+  height:554px;
+  width: 100%;
+/*  border: 1px solid red; */
+}
+.look_bl .look_pl>h4{
+  line-height: 60px;
+  margin-left: 12px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  font-family: "Cursive";
+}
+.look_list{
+ 
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(204, 204, 204, 0.6);
+  text-align: center;
+  display: block;
+  color: rgba(35, 35, 35, 0.86);
+  font-size: 16px;
+  border-radius: 6px;
+  margin-right: 2px;
+  margin-top: 20px;
+}
+.commentAll .look_list:hover{color:rgba(35, 35, 35, 0.86);}

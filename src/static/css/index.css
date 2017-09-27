@@ -1,4 +1,38 @@
 
-.content{
+.main-bannar img{
     display: block;
+    width: 100%;
+    min-width: 1136px;
+    height: auto;
+}
+
+
+.main-about{
+    height: 910px;
+    background: #fff;
+}
+.main-cont{
+    width: 1136px;
+    margin: 0 auto;
+}
+.main-cont h4{
+    padding-top: 80px;
+    text-align: center;
+    font-size: 16px;
+    height: 125px;
+}
+.about-cont{
+    position: relative;
+}
+.about-cont-back{
+    display: block;
+    margin: 0 auto;
+}
+.about-text{
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    top: 0;
+    width: 300px;
+    height: 80px;
 }

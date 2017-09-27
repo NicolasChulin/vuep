@@ -1,0 +1,167 @@
+.header-w .helpCenter_main{
+    margin:0 auto;
+    width:1150px;
+    margin-top: 140px;
+    overflow: hidden;
+
+}
+
+.helpCenter_t{
+	 padding-top: 10px;
+	width:210px;
+	 height:750px;
+	
+/* 	background-color: #f2f2f6; */
+	float: left;
+}
+.helpCenter_t>li{
+	width:100%;
+/* 	border:1px solid red;  */
+	line-height: 80px;
+	position: relative;
+	
+}
+ .helpCenter_t>li>span{
+ 	display: inline-block;
+	width:40px;
+ 	height:40px;
+	vertical-align: middle;
+ 	margin-top: -8px;
+
+ }
+ .helpCenter_t>li .help_01{
+ 	background:url(../images/help.png) no-repeat 0 0px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t>li .help_02{
+ 	background:url(../images/help.png) no-repeat 0 -40px;
+ 	background-size:100%;
+ 	background-clip:content-box;
+
+ }
+ .helpCenter_t>li .help_03{
+ 	background:url(../images/help.png) no-repeat 0 -80px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t>li .help_04{
+ 	background:url(../images/help.png) no-repeat 0 -120px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t>li .help_05{
+ 	background:url(../images/help.png) no-repeat 0 -160px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t>li .help_06{
+ 	background:url(../images/help.png) no-repeat 0 -200px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t .helpCenter_active .help_01{
+ 	background:url(../images/help.png) no-repeat 0 0px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t .helpCenter_active .help_02{
+ 	background:url(../images/help.png) no-repeat 0 -50px;
+ 	background-size:100%;
+ 	background-clip:content-box;
+
+ }
+ .helpCenter_t .helpCenter_active .help_03{
+ 	background:url(../images/help.png) no-repeat 0 -100px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t .helpCenter_active .help_04{
+ 	background:url(../images/help.png) no-repeat 0 -150px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t .helpCenter_active .help_05{
+ 	background:url(../images/help.png) no-repeat 0 -200px;
+ 	background-size:100%;
+
+ }
+ .helpCenter_t .helpCenter_active .help_06{
+ 	background:url(../images/help.png) no-repeat 0 -250px;
+ 	background-size:100%;
+
+ }
+.helpCenter_t>li>a{
+	font-size: 20px;
+	margin-left: 22px;
+	color:#666666;
+}
+ .helpCenter_t>li>i{
+ 	display: inline-block;
+ 	width:22px;
+ 	height: 26px;
+ 	position: absolute;
+ 	background: url(../images/sanjiao.png) no-repeat;
+    top: 33%;
+    right: -10px;
+    display: none;
+ }
+ .helpCenter_active .h_sanjiao{
+ 	display: block;
+ }
+.helpCenter_p{
+	float: left;
+	width: 80%;
+	height:100%;
+	border-left: 3px solid #ddd;
+	min-height: 750px;
+	/*  border: 1px solid #ccc; */
+}
+.helpCenter_m{
+ 	width:100%;
+ 	display: none;
+	/* text-align: center; */
+}
+
+.helpCenter_m .pay{
+	margin: 40px 0 0 90px;
+}
+.helpCenter_m .pay>h4{
+	font-size:32px;
+	font-weight: 400;
+	color:#ec9182;
+	margin-bottom: 40px;
+}
+.pay .p_type>a{
+	display:block;
+	line-height: 50px;
+	font-size:18px;
+}
+.pay .p_type>a:hover{
+	text-decoration:underline;
+	color:#ec9182;
+}
+
+
+.helpCenter_active{
+	color:#fff;
+	 /* background-color: #000; */
+}
+.helpCenter_t .helpCenter_active>span{
+/* 	background-clip:content-box; */
+	width:50px;
+	height: 50px;
+	background-size:100%;
+}
+.helpCenter_t .helpCenter_active>a{
+	font-size: 23px;
+	color:#333333;
+}
+.helpCenter_selected{
+	display: block;
+	transition:0.3 all;
+}
+.footer .links>a{
+color: #666;
+}
+/* 页面tab切换 */

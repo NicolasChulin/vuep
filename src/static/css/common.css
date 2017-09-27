@@ -1,0 +1,242 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, p, blockquote, tr, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei",Tahoma,Helvetica,Arial,sans-serif;
+    color: #333333;
+}
+li {
+    list-style: none;
+}
+em, i, u {
+    font-style: normal;
+}
+input {
+    outline: none;
+    border: none;
+    font-family: "Microsoft YaHei",Tahoma,Helvetica,Arial,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+fieldset, img {
+    border: 0;
+}
+abbr {
+    border: 0;
+    font-variant: normal;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    *color: #999999;
+}
+
+img{
+    vertical-align: middle;
+}
+
+
+/* header */
+.header{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0px 0px 10px #d0d0d0;
+    padding:20px 0;
+}
+.header-main{
+    width: 1136px;
+    margin: 0 auto;
+    height: 50px;
+    position: relative;
+}
+.header-icon{
+    float: left;
+    width: 200px;
+    height: 50px;
+}
+.header-menu{
+    margin-left: 400px;
+    margin-right: 136px;
+    height: 50px;
+}
+.header-menu > ul{
+    overflow: hidden;
+}
+li.header-li{
+    float: left;
+    width: 100px;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    transition: all .5s;
+}
+li.heade-li-act > a,
+li.header-li:hover > a,
+li.header-li li a:hover{
+    color: #ec9282;
+}
+li.header-li:hover ul,li.header-li ul:hover{
+    display: block;
+}
+li.header-li ul{
+    background: #fff;
+    display: none;
+}
+li.header-li li{
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.header-app-down{
+    position: absolute;
+    width: 100px;
+    height: 34px;
+    right: 0;
+    top:8px;
+    z-index: 99;
+}
+.header-app-down span{
+    display: block;
+    float: right;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ec9282;
+    cursor: pointer;
+}
+.header-app-down span:hover{
+    background: #de8a7b;
+}
+
+
+/* footer */
+.footer{
+    height: 382px;
+}
+.footer-main{
+    width: 1136px;
+    margin:0 auto;
+    text-align: center;
+}
+.footer_ew{
+    height: 306px;
+    padding-top: 80px;
+    font-size: 0;
+}
+.footer_ew li{
+    width: 156px;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+.footer_ew li:first-child{
+    margin-right: 55px;
+}
+.footer_ew img{
+    display: block;
+    width: 100%;
+}
+.footer_ew span{
+    display: block;
+}
+
+.footer-links{
+    height: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 0;
+}
+.footer-links li{
+    padding:0 15px;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    border-right: 1px solid #333;
+}
+.footer-links li:last-child{
+    border: 0;
+}
+.footer-cr{
+    color: #999;
+}
+
+/* app-down-tips */
+.app-tips{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index:999;
+    display: none;
+}
+.app-body{
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -250px;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+}
+.app-close{
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    top: 20px;
+    background-image: url(/static/images/close-dark.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.app-ew{
+    width: 222px;
+    height: 222px;
+    margin: 101px auto 46px;
+}
+.app-body p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+
+/* common */
+.cover{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.body-main{
+    min-height: 600px;
+    padding-top: 90px;
+    background-color: #e0e0e0;
+}

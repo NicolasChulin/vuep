@@ -1,0 +1,153 @@
+.designer_main {
+  height: 50px;
+  /* background-color: #f2f2f6; */
+  height: 800px;
+overflow: hidden;
+}
+.designer_main .tab {
+  border-bottom: 0;
+  height: 36px;
+  width: 380px;
+  margin-top: 92px;
+}
+.designer_main .tab > li {
+  position: relative;
+  float: left;
+  width: 70px;
+  height: 47px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: #414141;
+}
+.designer_main .tab > li.active {
+  border-color: #ec9182;
+  border-bottom: 2px solid #ec9182;
+}
+.designer_main .products {
+  width: 1150px;
+ 
+  height: 930px;
+  margin-top: 14px;
+}
+.designer_main .products .main {
+  float: left;
+  display: none;
+}
+.designer_main .products .main .designerList {
+  width: 100%;
+  float: left;
+}
+.designer_main .products .main .designerList .designerBox {
+  float: left;
+  height: 366px;
+}
+.designer_main .products .main .designerList .designerBox .designer_png {
+  margin: 10px 10px;
+  width: 363px;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.designer_main .products .main .designerList .designerBox .designer_png > img {
+  /*  padding: 10px;*/
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.designer_main .products .main .designerList .designerBox .designer_png .designer_m {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s;
+  background-color: #fbfaf9;
+}
+.designer_main .products .main .designerList .designerBox .designer_png .designer_m .designer_h {
+  width: 80%;
+  margin: 0 auto;
+  height: 20%;
+  position: relative;
+}
+.designer_main .products .main .designerList .designerBox .designer_png .designer_m .designer_h > h3 {
+  position: absolute;
+  font-size: 30px;
+  top: 60px;
+  font-weight: 400;
+}
+.designer_main .products .main .designerList .designerBox .designer_png .designer_m .designer_h > a {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  width: 65px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #ec9083;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.designer_main .products .main .designerList .designerBox .designer_png .designer_m > p {
+  width: 80%;
+  margin: 28px auto;
+  color: #030d24;
+  line-height: 32px;
+  font-size: 15px;
+}
+.designer_main .main.selected {
+  display: block;
+}
+.side{
+  width: 50px;
+  height: 180px;
+  bottom:10px;
+	right:15px;
+  position:fixed;
+	cursor:pointer;
+  // background: #414141;
+
+}
+.side>div{
+  margin-bottom: 15px;
+}
+.side .toTop{
+ width: 50px;
+  height: 50px;
+	cursor:pointer;
+	zIndex:999999;
+  background:url(../images/cebian.png) no-repeat 0 0px;
+}
+.side .side_f{
+   width: 50px;
+  height: 50px;
+  cursor:pointer;
+  background:url(../images/cebian.png) no-repeat 0 -50px;
+}
+.side .side_e{
+   width: 50px;
+  height: 50px;
+  cursor:pointer;
+  background:url(../images/cebian.png) no-repeat 0 -100px;
+
+}
+.side_e .s_look{
+  display: none;
+  width:200px;
+  height:200px;
+  border:1px solid #ddd;
+  position: absolute;
+  top:10px;
+  right:10px;
+  top: -54px;
+  right: 70px;
+  background:url(../images/z_u337.png) no-repeat;
+  background-size: 100% ;
+}
+.side_active{
+  display: block;
+}
