@@ -1,408 +1,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>buoumall-</title>
-    <link rel="shortcut icon" href="favicon.ico"  type="image/x-icon"/>
-    <meta name="description" content="buoumsll-专业的综合.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
-    <meta name="Keywords" content="网上购物,网上商城" />
-    <link rel="stylesheet" href="../css/base.css" type="text/css"/>
-     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/lookList.css" />
-    <link rel="stylesheet" href="../css/lanrenzhijia.css"/>
-    <link rel="stylesheet" href="../jQ-mtk/css/component.css">
-    <link rel="stylesheet" href="../jQueryWbPl/css/style.css">
-    <link rel="stylesheet" href="../jQueryWbPl/css/comment.css">
-    <link rel="stylesheet" href="../dist/css/swiper.min.css">
-    <style>
-      .swiper-mt {
-           width: 100%;
-           height: 100%;
-       }
-       .swiper-line {
-           height: auto;
-           -webkit-box-sizing: border-box;
-           box-sizing: border-box;
-           padding: 30px;
-       }
-       .swiper-bg {
-           width: 100%;
-           height: 300px;
-           margin-left: auto;
-           margin-right: auto;
-       }
-       .swiper-img {
-           background-size: cover;
-           background-position: center;
-       }
-       .gallery-top {
-           height: 80%;
-           width: 100%;
-       }
-       .gallery-thumbs {
-           height: 20%;
-           box-sizing: border-box;
-           padding: 10px 0;
-       }
-       .gallery-thumbs .swiper-img {
-           height: 100%;
-           opacity: 0.4;
-       }
-       .gallery-thumbs .swiper-slide-active {
-           opacity: 1;
-       }
+    <title>今日LOOK-buoumall</title>
+    <link rel="shortcut icon" href="/static/images/favicon.ico"  type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="buoumall-专业的综合网上购物商城,.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
+    <meta name="Keywords" content="网上购物,布偶猫,buoumall" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/libs/layui-2.1.2/css/layui.css">
+    <link rel="stylesheet" href="/static/css/looklist.css">
 
-    </style>
 </head>
 <body>
-<!--快捷导航开始-->
 
-<div class="header-w">
     <div class="header">
-        <div class="header_h">
-            <div class="logo clearfix">  <!--logo 优化-->
-                   <h1>
-                       <a href="#" title="布偶猫"> 布偶猫 </a>
-                   </h1>
+        <div class="header-main">
+            <div class="header-icon">
+                <img class="cover" src="/static/images/logo-font.png" alt="logo">
             </div>
-            <!-- 航栏目 -->
-            <div class="wrap">
-              <ul id="nav">
-                <li><a href="../index.html" class="hov">首页</a></li>
-                <li><a href="./looklist.html">LOOK</a>
-                    <ul>
-                        <li><a href="#">LOOK详情</a></li>
-                        <li><a href="#">APP下载更新</a></li>
-                        
-                    </ul>
-                </li>
-                <li><a href="./designer.html">设计师 <i class="icon"></i></a>
-                    <ul>
-                        <li><a href="./designer.html">设计师列表</a></li>
-                        <li><a href="./designerlive.html">加入我们</a></li>
-                    </ul>           
-                </li>
-                <li><a href="./news.html">新闻动态</a>
-                    <ul>
-                         <li><a href="./newdetails.html">文章详情</a></li>
-                    </ul>
-                </li>
-                <li><a href="./regard.html">关于我们</a>
-                    <ul>
-                        <li><a>关于我们</a></li>
-                        <li><a>加入我们</a></li>
-                        <li><a>联系我们</a></li>
-                        <li><a>法律声明</a></li>
-                    </ul>
-                </li>
-                <li><a href="./helpCenter.html">帮助中心</a>
-                    <ul>
-                         <li><a href="#">帮助结果</a></li>
-                    </ul>
-                </li>
-              </ul>
+            <div class="header-menu">
+                <ul>
+                    <li class="header-li heade-li-act">
+                        <a href="/template/index.html" class="hov">首页</a>
+                    </li>
+                    <li class="header-li">
+                        <a href="/template/looklist.html">LOOK</a>
+                    </li>
+                    <li class="header-li">
+                        <a href="/template/designer.html">设计师 <i class="icon"></i></a>
+                        <ul>
+                            <li><a href="/template/designer.html">设计师列表</a></li>
+                            <li><a href="/template/designerlive.html">设计师入驻</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-li">
+                        <a href="/template/news.html">新闻动态</a>
+                    </li>
+                    <li class="header-li">
+                        <a href="/template/aboutus.html">关于我们</a>
+                        <ul class="regard_ul">
+                            <li><a href="javascript:;">关于我们</a></li>
+                            <li><a href="javascript:;">加入我们</a></li>
+                            <li><a href="javascript:;">联系我们</a></li>
+                            <li><a href="javascript:;">法律声明</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-li">
+                        <a href="/template/helpCenter.html">帮助中心</a>
+                    </li>
+                </ul>
             </div>
-            <!-- 下载链接 -->
-            <div style="padding-left:450px;">
-                <table class="table">
-                    <tr>
-                        <td><a href="javascript:;" class="md-trigger btn btn-primary btn-sm h_loding" data-modal="modal-1">APP下载</a></td>
-                    </tr>
-                </table>
-                <div class="md-modal md-effect-1" id="modal-1">
-                    <div class="md-content">
-                        <div>
-                            <button class="md-close btn-sm btn-primary">Close me!</button>
-                            <ul>
-                                <li>
-                                    <img src="../images/z_u335.png" alt="sorry...下载吧" style="width: 270px;">
-                                    <h4>扫描二维码，下载布偶猫APP查看更多</h4>
-                                    <p>在布偶猫，和最会生活的人做朋友</p>
-                                </li>
-                            </ul>
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="md-overlay"></div>
+            <div class="header-app-down" id="header-app-down">
+                <span>App下载</span>
             </div>
-
         </div>
-    </div>  
-        <!--图片列表-->
-    <div class="lookList">
-      <div class="look_box" id="look_box">
-   <!--       <div class="lookImg clearfix">
-                <a href="javascript:;" class="md-trigger btn btn-primary btn-sm"  data-modal="modal-13">
-                  <div class="look_png">
-                     <img src="{{#value.postimg}}" alt="图片在加载中....">
-                  </div>
-                </a>
-                <h4>{{value.title}}</h4>
-                <p>{{value.description}}</p>
-            </div> -->
-      </div>
-           <!--每张图片列表的详细信息的模态框   -->
-      <div class="md-modal md-effect-13 clearfix" id="modal-13">
-          <div class="md-content " style="overflow:hidden;width:1000px;height:880px;background:rgba(0,0,0,0);">
-            <div class="swiper-container swiper-mt" style="position:relative; width:810px;background:#fff;height:880px;">
-              <div class="look_bl swiper-wrapper">
-                  <div class="lookDetial swiper-slide swiper-line" id="lookDetial">
-                        <!-- 01 -->
-                <!--<div class="look_prouct">
-                         <p>Ralph & Russo女装春2017发布演奏会，4款时尚衣服等你，领部细节：圆领：经典的圆领设计，简单大方，时尚百搭。大大  的圆领设计，休闲感十足。</p>
-                         <div class="look_like">
-                             <a>
-                                 <span class="like_time"></span>
-                                 53分钟前
-                             </a>
-                             <a>
-                                 <span class="like_eye"></span>
-                                 8888
-                             </a>
-                         </div>
-                    </div>
-                        02
-                    <div class="look_nav clearfix" id="look_nav">
-                       <div class="look_n">
-                           <div class="look_i">
-                               <img src="../images/u390.png" alt="图片在加载中....">
-                               <div class="gif_bottom">
-                               <a class="gif_b"><span class="gif_l"></span>12314</a>
-                               <a class="gif_a"><span class="gif_f"></span>分享</a>
-                           </div>
-                           </div>
-                        
-                       </div>
-                       <div class="swiper-container gallery-top swiper-bg">
-                           <div class="swiper-wrapper">
-                              <div class="swiper-slide swiper-img" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
-                           </div>
-                          Add Arrows
-                           <div class="swiper-button-next swiper-button-white"></div>
-                           <div class="swiper-button-prev swiper-button-white"></div>
-                       </div>
-                       <div class="swiper-container gallery-thumbs">
-                          <div class="swiper-wrapper">
-                           <div class="swiper-slide swiper-img" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
-                          </div>
-                       </div>
-                    </div>
-                        03
-                    <div class="look_pt clearfix">
-                           <h4>搭配商品</h4>
-                           <div class="look_g">
-                               <div class="look_gif">
-                                   <img src="../images/u390.png" alt="图片在加载中....">
-                               </div>
-                               <div class="look_pay">
-                                   <p>没有太晚的开始不如就从今天开始</p>
-                                   <span class="money">4556.00</span><a class="order">立即购买</a>
-                               </div>
-                           </div>
-                           <div class="look_g">
-                               <div class="look_gif">
-                                    <img src="../images/u390.png" alt="图片在加载中....">
-                               </div>
-                               <div class="look_pay">
-                               <p>没有太晚的开始不如就从今天开始没有太晚的开始不如就从今天开始没有太晚的开始不如就从今天开始</p>
-                               <span class="money">200</span><a class="order">立即购买</a>
-                               </div>
-                           </div> 
-                            <div class="look_g">
-                               <div class="look_gif">
-                                    <img src="../images/u390.png" alt="图片在加载中....">
-                               </div>
-                               <div class="look_pay">
-                               <p>没有太晚的开始不如就从今天开始没有太晚的开始不如就从今天开始没有太晚的开始不如就从今天开始</p>
-                               <span class="money">200</span><a class="order">立即购买</a>
-                               </div>
-                           </div> 
-                        
-                    </div>
-                        04
-                    <div class="look_pl">
-                           <h4>评论作品<spna class="pl_works">(11)</spna></h4>
-                             评论区域 begin
-                           <div class="commentAll">
-                               <div class="reviewArea clearfix">
-                                   <textarea class="content comment-input" placeholder="Please enter a comment&hellip;" onkeyup="keyUP(this)"></textarea>
-                                   <a href="javascript:;" class="plBtn">评论</a>
-                               </div>
-                               评论区域 end
-                               回复区域 begin
-                               <div class="comment-show">
-                                   <div class="comment-show-con clearfix">
-                                       <div class="comment-show-con-img pull-left"><img src="../images/header-img-comment_03.png" alt=""></div>
-                                       <div class="comment-show-con-list pull-left clearfix">
-                                           <div class="pl-text clearfix">
-                                               <a href="#" class="comment-size-name">Mi_130418689 : </a>
-                                               <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
-                                           </div>
-                                           <div class="date-dz">
-                                               发表于:<span class="date-dz-left comment-time">2017-5-2 11:11:39</span>
-                                               
-                                               
-                                           </div>
-                                           <div class="hf-list-con"></div>
-                                       </div>
-                                   </div>
-                               </div>
-                               回复区域 end
-                                <a href="javascript:;" class="look_list">查看更多评论</a>
-                           </div>
-                        
-                    </div> -->
-                  </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-
-          
-            </div>
-            <button class="md-close btn-sm btn-primary clearfix"></button>    
-          </div>
-      </div>
-      <div class="md-overlay"></div>
     </div>
-<!--info栏目 二维分享页面-->
-	<div class="footer w">
-		<div class="footer_nav">
-			<ul class="footer_ew">
-				<li>
-					<a><img src="../images/z_u335.png" alt=""></a>
-					<span>扫二维码微信关注</span>
-				</li>
-				<li>
-					<a><img src="../images/z_u335.png" alt=""></a>
-					<span>扫二维码下载APP</span>
-				</li>
-			</ul>
-			<div class="links">
-			<a href="#">LOOK</a><span>|</span>
-			<a href="#">设计师</a><span>|</span>
-			<a href="#">设计师入驻</a><span>|</span>
-			<a href="#">新闻动态</a><span>|</span>
-			<a href="#">帮助中心</a><span>|</span>
-			<a href="#">关于我们</a><span>|</span>
-			<p>Copyright by 布偶猫Buoumall，武汉布偶猫科技有限公司 鄂ICP备15619607号-1</p>
-			</div>
-		</div>
-	</div>
-  </div>          
-<!--footer页面底部结束-->
- <script type="text/html" id="looklist">
-      {{each matchList as value i}}
-            <div class="lookImg clearfix">
-                <a href="javascript:;" class="md-trigger btn btn-primary btn-sm"  data-modal="modal-13" data-id="{{value.id}}">
-                  <div class="look_png">
-                     <img src="{{#value.postimg}}" alt="图片在加载中....">
-                  </div>
-                </a>
-                <h4>{{value.title}}</h4>
+
+    <div class="body-main">
+        <div class="main-item main-look">
+            <div class="main-cont look-list" id="look-list"></div>
+            <div class="look-pages" id="look-page"></div>
+            <div class="list-right-action">
+                <ul>
+                    <li id="goUp"></li>
+                    <li id="callGuest"></li>
+                    <li id="cebianApp"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-main">
+            <ul class="footer_ew">
+                <li>
+                    <img src="/static/images/qrcode-gzh.png" alt="公众号二维码">
+                    <span>扫二维码微信关注</span>
+                </li>
+                <li>
+                    <img src="/static/images/qrcode-app.png" alt="app二维码">
+                    <span>扫二维码下载APP</span>
+                </li>
+            </ul>
+            <ul class="footer-links">
+                <li><a href="/template/index.html">LOOK</a></li>
+                <li><a href="/template/designer.html">设计师</a></li>
+                <li><a href="/template/designerlive.html">设计师入驻</a></li>
+                <li><a href="/template/news.html">新闻动态</a></li>
+                <li><a href="/template/helpCenter.html">帮助中心</a></li>
+                <li><a href="/template/aboutus.html">关于我们</a></li>
+            </ul>
+            <p class="footer-cr">Copyright by 布偶猫Buoumall，武汉布偶猫科技有限公司 鄂ICP备15619607号-1</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/libs/swiper/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="/static/libs/layui-2.1.2/layui.js"></script>
+    <script type="text/javascript" src="/static/libs/template-web.js"></script>
+    <script type="text/javascript" src="/static/js/common.js"></script>
+    <script type="text/javascript" src="/static/js/looklist.js"></script>
+
+
+    <script type="text/html" id="lookList">
+        {{each looklist as value i}}
+        <div class="look-li">
+            <div class="look-cover" data-id="{{value.id}}">
+                <img class="cover" src="{{#value.cover}}" alt="{{#value.title}}">
+            </div>
+            <div class="look-info">
+                <span>{{value.title}}</span>
                 <p>{{value.description}}</p>
             </div>
+        </div>
+        {{/each}}
+    </script>
+
+<script type="text/html" id="lookDetail">
+<div class="look_prouct">
+    <p>Ralph & R尚百搭。大大  的圆领设计，休闲感十足。</p>
+    <div class="look_like">
+         <a>
+             <span class="like_time"></span>
+         </a>
+         <a>
+             <span class="like_eye"></span>
+         </a>
+     </div>
+</div>
+<div class="look_nav clearfix" id="look_nav">
+</div>
+<div class="look_pt clearfix">
+   <h4>搭配商品</h4>
+   {{each lookphoto as value i}}
+   <div class="look_g">
+       <div class="look_gif">
+           <img src="{{#value.testimg}}" alt="图片在加载中....">
+       </div>
+       <div class="look_pay">
+           <p>{{value.testName}}</p>
+           <span class="money">{{value.myPrice}}</span><a class="order">立即购买</a>
+       </div>
+   </div>
+    {{/each}}
+</div>
+<div class="look_pl" id="comment">
+   <h4>评论作品<spna class="pl_works">(11)</spna></h4>
+     <!--评论区域 begin-->
+   <div class="commentAll">
+       <!--评论区域 end-->
+       <!--回复区域 begin-->
+        {{each commentList as value i}}
+       <div class="comment-show">
+           <div class="comment-show-con clearfix">
+               <div class="comment-show-con-img pull-left"><img src="{{#value.authorPng}}" alt=""></div>
+               <div class="comment-show-con-list pull-left clearfix">
+                   <div class="pl-text clearfix">
+                       <a href="#" class="comment-size-name">{{value.authorName}}</a>
+                       <span class="my-pl-con">&nbsp;{{value.content}}</span>
+                   </div>
+                   <div class="date-dz">
+                       发表于:<span class="date-dz-left comment-time">{{value.createTime}}</span>
+                   </div>
+                   <div class="hf-list-con"></div>
+               </div>
+           </div>
+       </div>
       {{/each}}
+       <!--回复区域 end-->
+        <a href="javascript:;" class="look_list">查看更多评论</a>
+   </div>
+</div>
 </script>
-<script type="text/html" id="lookDel">
-                  <div class="look_prouct">
-                         <p>Ralph & R尚百搭。大大  的圆领设计，休闲感十足。</p>
-                         <div class="look_like">
-                             <a>
-                                 <span class="like_time"></span>
-                             </a>
-                             <a>
-                                 <span class="like_eye"></span>
-                             </a>
-                         </div>
-                         
-                    </div>
-                        <!-- 02 -->
-                    <div class="look_nav clearfix" id="look_nav">
-                       <!--     <div class="look_n">
-                           <div class="look_i">
-                               <img src="../images/u390.png" alt="图片在加载中....">
-                               <div class="gif_bottom">
-                               <a class="gif_b"><span class="gif_l"></span>12314</a>
-                               <a class="gif_a"><span class="gif_f"></span>分享</a>
-                           </div>
-                           </div>
-                        
-                       </div> -->
-                       <!--  <div class="swiper-container gallery-top swiper-bg">
-                           <div class="swiper-wrapper">
-                              <div class="swiper-slide swiper-img" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
-                           </div>
-                          Add Arrows
-                           <div class="swiper-button-next swiper-button-white"></div>
-                           <div class="swiper-button-prev swiper-button-white"></div>
-                       </div>
-                       <div class="swiper-container gallery-thumbs">
-                          <div class="swiper-wrapper">
-                           <div class="swiper-slide swiper-img" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
-                          </div>
-                       </div> -->
-                    </div>
-                        <!-- 03 -->
-                     
-                    <div class="look_pt clearfix">
-                           <h4>搭配商品</h4>
-                           {{each lookphoto as value i}}   
-                           <div class="look_g">
-                               <div class="look_gif">
-                                   <img src="{{#value.testimg}}" alt="图片在加载中....">
-                               </div>
-                               <div class="look_pay">
-                                   <p>{{value.testName}}</p>
-                                   <span class="money">{{value.myPrice}}</span><a class="order">立即购买</a>
-                               </div>
-                           </div>
-                            {{/each}}
-                    </div>
-                 
-                        <!-- 04 -->
-                    <div class="look_pl" id="comment">
-                             
-
-                           <h4>评论作品<spna class="pl_works">(11)</spna></h4>
-                             <!--评论区域 begin-->
-                           <div class="commentAll">
-                               <!--评论区域 end-->
-                               <!--回复区域 begin-->
-                                {{each commentList as value i}}
-                               <div class="comment-show">
-                                   <div class="comment-show-con clearfix">
-                                       <div class="comment-show-con-img pull-left"><img src="{{#value.authorPng}}" alt=""></div>
-                                       <div class="comment-show-con-list pull-left clearfix">
-                                           <div class="pl-text clearfix">
-                                               <a href="#" class="comment-size-name">{{value.authorName}}</a>
-                                               <span class="my-pl-con">&nbsp;{{value.content}}</span>
-                                           </div>
-                                           <div class="date-dz">
-                                               发表于:<span class="date-dz-left comment-time">{{value.createTime}}</span>
-                                           </div>
-                                           <div class="hf-list-con"></div>
-                                       </div>
-                                   </div>
-                               </div>
-                              {{/each}}
-                               <!--回复区域 end-->
-                                <a href="javascript:;" class="look_list">查看更多评论</a>
-                           </div>
-
-    
-                    </div>
-        
-      
-</script>
-<script  src="../lib/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="../jQ-mtk/js/classie.js"></script>
-<script src="../jQ-mtk/js/modalEffects.js"></script>
-<script type="text/javascript" src="../jQueryWbPl/js/jquery.flexText.js"></script>
-<!--<script src="./lib/template.js"></script>-->
-<script src="../dist/js/swiper.min.js"></script>
-<script src="../lib/template.js"></script>
-<script src="../js/look.js"></script>
-<script src="../js/looklist.js"></script>
-<script src="../js/index.js"></script>
 
 </body>
 </html>

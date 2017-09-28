@@ -85,7 +85,7 @@ li.header-li{
 li.heade-li-act > a,
 li.header-li:hover > a,
 li.header-li li a:hover{
-    color: #ec9282;
+    color: #ec9182;
 }
 li.header-li:hover ul,li.header-li ul:hover{
     display: block;
@@ -119,7 +119,7 @@ li.header-li li{
     text-align: center;
     font-size: 14px;
     color: #fff;
-    background-color: #ec9282;
+    background-color: #ec9182;
     cursor: pointer;
 }
 .header-app-down span:hover{
@@ -226,7 +226,29 @@ li.header-li li{
     margin-bottom: 20px;
 }
 
-
+/* list-right-action */
+.list-right-action{
+    position: fixed;
+    width: 50px;
+    height: 170px;
+    left: 50%;
+    bottom: 100px;
+    margin-left: 588px;
+    z-index: 99;
+}
+.list-right-action li{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background: url(/static/images/cebian.png) no-repeat;
+    cursor: pointer;
+}
+.list-right-action li:nth-of-type(2){
+    background-position: 0 -50px;
+}
+.list-right-action li:nth-of-type(3){
+    background-position: 0 -100px;
+}
 
 /* common */
 .cover{
@@ -238,5 +260,9 @@ li.header-li li{
 .body-main{
     min-height: 600px;
     padding-top: 90px;
-    background-color: #e0e0e0;
+    background-color: #f3f3f3;
+}
+.main-cont{
+    width: 1136px;
+    margin: 0 auto;
 }
