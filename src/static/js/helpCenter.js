@@ -1,18 +1,10 @@
-$(document).ready(function() {
-	$('#nav li').hover(function() {
-		$('ul', this).stop().fadeIn(300);
-		$(this).children('a:first').addClass("hov");
-	}, function() {
-		$('ul', this).stop().fadeOut(300);
-		$(this).children('a:first').removeClass("hov");
-
-	});
-	$(".helpCenter_main .helpCenter_t>li").click(function(){
-		console.log(this)
-		$(this).addClass('helpCenter_active').siblings("li").removeClass("helpCenter_active");
-		 var index = $(this).index();
-		  $(".helpCenter_p>div:eq(" + index + ")").addClass("helpCenter_selected").siblings("div").removeClass("helpCenter_selected");
-	})
-	
+$(function() {
+    $('#help-menu li').on('click', function(){
+        var $this = $(this);
+        $this.addClass('help-mact').siblings().removeClass('help-mact');
+        var index = $this.index();
+        var actLi = $('#help-cont').children('.help-li')[index];
+        $(actLi).show().siblings().hide();
+    });
 
 });

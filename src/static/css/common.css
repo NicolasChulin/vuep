@@ -2,7 +2,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, p, blockquote,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
 }
 body {
     font-size: 14px;
@@ -82,7 +83,11 @@ li.header-li{
     position: relative;
     transition: all .5s;
 }
-li.heade-li-act > a,
+li.header-li a{
+    display: block;
+    height: 100%;
+}
+li.header-li-act > a,
 li.header-li:hover > a,
 li.header-li li a:hover{
     color: #ec9182;
@@ -260,7 +265,7 @@ li.header-li li{
 .body-main{
     min-height: 600px;
     padding-top: 90px;
-    background-color: #f3f3f3;
+    background-color: #fff;
 }
 .main-cont{
     width: 1136px;

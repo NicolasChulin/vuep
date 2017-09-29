@@ -71,8 +71,23 @@ function showAppTips(){
         $tips.fadeOut(500).remove();
     });
 }
+
 $(function(){
     $('#header-app-down, #cebianApp, #callGuest').on('click', function(){
         showAppTips();
     });
+    
+    /* header-li actcolor */
+    var pageType = $('#pageType').val();
+    if(pageType.indexOf('_')>-1){
+        var types = pageType.split('_');
+        var mainLi = $('#header-menu').children().children('.header-li')[types[0]];
+        $(mainLi).addClass('header-li-act');
+        var subLi = $(mainLi).find('li')[types[1]];
+        $(subLi).addClass('header-li-act');
+    }else{
+        var mainLi = $('#header-menu').children().children('.header-li')[pageType];
+        $(mainLi).addClass('header-li-act');
+    }
+
 })

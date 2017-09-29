@@ -19,11 +19,13 @@
     <div class="header">
         <div class="header-main">
             <div class="header-icon">
-                <img class="cover" src="/static/images/logo-font.png" alt="logo">
+                <a href="/template/index.html">
+                    <img class="cover" src="/static/images/logo-font.png" alt="logo">
+                </a>
             </div>
-            <div class="header-menu">
+            <div class="header-menu" id="header-menu">
                 <ul>
-                    <li class="header-li heade-li-act">
+                    <li class="header-li">
                         <a href="/template/index.html" class="hov">首页</a>
                     </li>
                     <li class="header-li">
@@ -40,16 +42,16 @@
                         <a href="/template/news.html">新闻动态</a>
                     </li>
                     <li class="header-li">
-                        <a href="/template/aboutus.html">关于我们</a>
-                        <ul class="regard_ul">
-                            <li><a href="javascript:;">关于我们</a></li>
-                            <li><a href="javascript:;">加入我们</a></li>
-                            <li><a href="javascript:;">联系我们</a></li>
-                            <li><a href="javascript:;">法律声明</a></li>
-                        </ul>
+                        <a href="/template/helpCenter.html">帮助中心</a>
                     </li>
                     <li class="header-li">
-                        <a href="/template/helpCenter.html">帮助中心</a>
+                        <a href="/template/aboutus.html">关于我们</a>
+                        <ul class="regard_ul">
+                            <li><a href="/template/aboutus.html">关于我们</a></li>
+                            <li><a href="/template/aboutus.html?type=1">加入我们</a></li>
+                            <li><a href="/template/aboutus.html?type=2">联系我们</a></li>
+                            <li><a href="/template/aboutus.html?type=3">法律声明</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -77,12 +79,53 @@
             </div>
         </div>
 
-
         <div class="main-item main-process">
             <div class="main-cont">
                 <h4 class="main-title"><i></i>入驻流程</h4>
-                <div class="">
-
+                <div class="process-cont">
+                    <ul class="process-line">
+                        <li>
+                            <span class="line-icon"></span>
+                            <span class="line-name">入驻申请</span>
+                        </li>
+                        <li>
+                            <span class="line-icon"></span>
+                            <span class="line-name">等待审核</span>
+                        </li>
+                        <li>
+                            <span class="line-icon"></span>
+                            <span class="line-name">签约</span>
+                        </li>
+                        <li>
+                            <span class="line-icon"></span>
+                            <span class="line-name">店铺上线</span>
+                        </li>
+                    </ul>
+                    <ul class="process-form">
+                        <li>
+                            <label for="realname">真实姓名：</label>
+                            <input type="text" name="realname" id="realname" autofocus required/>
+                        </li>
+                        <li>
+                            <label for="phone">手机号码：</label>
+                            <input type="text" name="phone" id="phone"  required/>
+                        </li>
+                        <li>
+                            <label for="email">电子邮箱：</label>
+                            <input type="text" name="email" id="email"  required/>
+                        </li>
+                        <li>
+                            <label for="design">设计领域：</label>
+                            <input type="text" name="design" id="design"  required/>
+                        </li>
+                        <li>
+                            <label for="address">所在区域：</label>
+                            <input type="text" name="address" id="address"  required/>
+                        </li>
+                        <li>
+                            <input type="button" value="提交"/>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -90,11 +133,74 @@
         <div class="main-item main-advantage">
             <div class="main-cont">
                 <h4 class="main-title"><i></i>入驻布偶猫优势</h4>
-                <div class="">
+                <div class="advantage-cont">
+                    <ul>
+                        <li>
+                            <div class="adv-cover">
+                                <img src="/static/images/u390.png" alt="图片在加载中....">
+                            </div>
+                            <div class="adv-infos">
+                                <h5>设计师个人形象包装</h5>
+                                <div class="adv-det">
+                                    <p>你一定希望能有更多人与你的作品产生共鸣，</p>
+                                    <p>因为它们承载着你的思想，你的灵魂。</p>
+                                    <p>曲越高，和越寡，自古知音难觅。</p>
+                                    <p>懂你的人，从不轻言离去，</p>
+                                    <p>所以你一定会来布偶猫，有人爱你的格调</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="adv-cover">
+                                <img src="/static/images/u390.png" alt="图片在加载中....">
+                            </div>
+                            <div class="adv-infos">
+                                <h5>设计师个人形象包装</h5>
+                                <div class="adv-det">
+                                    <p>你一定希望能有更多人与你的作品产生共鸣，</p>
+                                    <p>因为它们承载着你的思想，你的灵魂。</p>
+                                    <p>曲越高，和越寡，自古知音难觅。</p>
+                                    <p>懂你的人，从不轻言离去，</p>
+                                    <p>所以你一定会来布偶猫，有人爱你的格调</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="adv-cover">
+                                <img src="/static/images/u390.png" alt="图片在加载中....">
+                            </div>
+                            <div class="adv-infos">
+                                <h5>设计师个人形象包装</h5>
+                                <div class="adv-det">
+                                    <p>你一定希望能有更多人与你的作品产生共鸣，</p>
+                                    <p>因为它们承载着你的思想，你的灵魂。</p>
+                                    <p>曲越高，和越寡，自古知音难觅。</p>
+                                    <p>懂你的人，从不轻言离去，</p>
+                                    <p>所以你一定会来布偶猫，有人爱你的格调</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="adv-cover">
+                                <img src="/static/images/u390.png" alt="图片在加载中....">
+                            </div>
+                            <div class="adv-infos">
+                                <h5>设计师个人形象包装</h5>
+                                <div class="adv-det">
+                                    <p>你一定希望能有更多人与你的作品产生共鸣，</p>
+                                    <p>因为它们承载着你的思想，你的灵魂。</p>
+                                    <p>曲越高，和越寡，自古知音难觅。</p>
+                                    <p>懂你的人，从不轻言离去，</p>
+                                    <p>所以你一定会来布偶猫，有人爱你的格调</p>
+                                </div>
+                            </div>
+                        </li>
 
+                    </ul>
                 </div>
             </div>
         </div>
+        <input type="hidden" id="pageType" value="2_1">
     </div>
 
     <div class="footer">

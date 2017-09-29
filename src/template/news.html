@@ -13,14 +13,17 @@
     <link rel="stylesheet" href="/static/css/news.css">
 </head>
 <body>
+
     <div class="header">
         <div class="header-main">
             <div class="header-icon">
-                <img class="cover" src="/static/images/logo-font.png" alt="logo">
+                <a href="/template/index.html">
+                    <img class="cover" src="/static/images/logo-font.png" alt="logo">
+                </a>
             </div>
-            <div class="header-menu">
+            <div class="header-menu" id="header-menu">
                 <ul>
-                    <li class="header-li heade-li-act">
+                    <li class="header-li">
                         <a href="/template/index.html" class="hov">首页</a>
                     </li>
                     <li class="header-li">
@@ -37,16 +40,16 @@
                         <a href="/template/news.html">新闻动态</a>
                     </li>
                     <li class="header-li">
-                        <a href="/template/aboutus.html">关于我们</a>
-                        <ul class="regard_ul">
-                            <li><a href="javascript:;">关于我们</a></li>
-                            <li><a href="javascript:;">加入我们</a></li>
-                            <li><a href="javascript:;">联系我们</a></li>
-                            <li><a href="javascript:;">法律声明</a></li>
-                        </ul>
+                        <a href="/template/helpCenter.html">帮助中心</a>
                     </li>
                     <li class="header-li">
-                        <a href="/template/helpCenter.html">帮助中心</a>
+                        <a href="/template/aboutus.html">关于我们</a>
+                        <ul class="regard_ul">
+                            <li><a href="/template/aboutus.html">关于我们</a></li>
+                            <li><a href="/template/aboutus.html?type=1">加入我们</a></li>
+                            <li><a href="/template/aboutus.html?type=2">联系我们</a></li>
+                            <li><a href="/template/aboutus.html?type=3">法律声明</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -116,6 +119,7 @@
             </div>
 
         </div>
+        <input type="hidden" id="pageType" value="3">
     </div>
 
     <div class="footer">

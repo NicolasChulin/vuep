@@ -1,6 +1,6 @@
 $(function(){
 
-    var pageSize = 2;
+    var pageSize = 6;
     var laypage, layer;
     var select = {
         type: 1,
