@@ -76,7 +76,7 @@ $(function(){
     $('#header-app-down, #cebianApp, #callGuest').on('click', function(){
         showAppTips();
     });
-    
+
     /* header-li actcolor */
     var pageType = $('#pageType').val();
     if(pageType.indexOf('_')>-1){
@@ -90,4 +90,4 @@ $(function(){
         $(mainLi).addClass('header-li-act');
     }
 
-})
+});

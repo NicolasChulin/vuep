@@ -47,3 +47,152 @@ span.layui-laypage-curr,
 
 
 /* look-detail */
+.detail-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.detail-boy{
+    width: 1000px;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: -500px;
+    background: #fff;
+}
+.detail-close{
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    right: -68px;
+    top: 0;
+    background: url(/static/images/close-dark.png) no-repeat;
+}
+
+
+.detail-header{
+    padding:30px 0 20px;
+    width: 750px;
+    margin: 0 auto;
+}
+.detail-header h3{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+}
+.detail-header p{
+    line-height: 24px;
+    color: #999;
+}
+.detail-covers{
+    width: 750px;
+    height: 1024px;
+    margin: 0 auto;
+    /*display: none;*/
+}
+.detail-covers img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*detail-prod*/
+.detail-prod{
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 50px;
+}
+.detail-prod-body{
+    margin: 0 auto;
+    width: 750px;
+}
+.detail-prod h4{
+    height: 76px;
+    padding-top:35px;
+    font-size: 16px;
+}
+.prods-list{
+    overflow: hidden;
+}
+.prods-list li{
+    width: 33.33%;
+    padding: 0 21px 21px 0;
+    float: left;
+}
+.prods-list li:nth-of-type(3n){
+    padding-right: 0;
+}
+.prod-cover{
+    height: 314px;
+}
+.prod-name{
+    margin-top: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.prod-price{
+    margin-top: 20px;
+    height: 26px;
+    line-height: 26px;
+    position: relative;
+    color: #ec9182;
+}
+.prod-btn{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    background-color: #ec9182;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/*detail-comment*/
+.detail-comment{
+    width: 750px;
+    margin: 0 auto;
+}
+.detail-comment h4{
+    height: 76px;
+    padding-top:35px;
+    font-size: 16px;
+}
+.comment-list li{
+    padding: 40px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.com-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+.com-cont{
+    margin-left: 70px;
+}
+.com-title{
+    height: 30px;
+    line-height: 30px;
+}
+.com-title span:first-child{
+    margin-right: 10px;
+    color: #ec9182;
+}
+
+.comment-more{
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f3f3f3;
+    text-align: center;
+}

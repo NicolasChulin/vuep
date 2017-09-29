@@ -9,6 +9,34 @@ $(function(){
         getLookList(1);
     });
 
+    var mySwiper = new Swiper('.detail-banner', {
+        loop: true,
+        autoplay: 3500,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        autoplayDisableOnInteraction: false
+    });
+    var swiper = new Swiper('.detail-scroll', {
+        scrollbar: '.swiper-scrollbar',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true,
+    });
+
+
+    /* event-bind */
+    $('#look-list').on('click', '.look-cover', function(){
+        var id = $(this).attr('data-id');
+        console.log(id);
+        layer.msg(id, {time: 1000});
+
+    });
+
+
+
+    /* functions */
     function getLookList(page){
         $.ajax({
             url: GLOBAL.domain + '/look/list',
@@ -56,13 +84,37 @@ $(function(){
         });
     }
 
+    function getLookDetail(id){
+        $.ajax({
+            url: GLOBAL.domain + '/look/detail',
+            data: {
+                lookId: id
+            },
+            type: 'POST',
+            success: function(data){
+                if(data.code==200 && data.data.list.length>0){
+                    var looklist = [];
+                    data.data.list.forEach(function(item,index){
+                        looklist.push({
+                            id: item.id,
+                            cover: getResizeImgUrl(item.cover, 'md'),
+                            description: item.description,
+                            title: item.title
+                        })
+                    });
+                    var listDom = template('lookList', {looklist:looklist});
+                    $('#look-list').html(listDom);
 
-    /* event-bind */
-    $('#look-list').on('click', '.look-cover', function(){
-        var id = $(this).attr('data-id');
-        layer.msg(id,{time:500});
+                }
+            },
+            error: function(){
+                layer.msg('网络错误',{time:500});
+            }
+        });
+    }
 
-    });
+
+
 
 /*  old code  */
 
