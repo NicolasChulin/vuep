@@ -66,108 +66,25 @@
         <div class="main-item main-look">
             <div class="main-cont look-list" id="look-list"></div>
             <div class="look-pages" id="look-page"></div>
-            <div class="list-right-action">
-                <ul>
-                    <li id="goUp"></li>
-                    <li id="callGuest"></li>
-                    <li id="cebianApp"></li>
-                </ul>
-            </div>
         </div>
     </div>
 
-    <div class="detail-box">
-        <div class="detail-boy" id='detail-box'>
-            <div class="detail-close"></div>
+    <div class="detail-box" id='detail-box'>
+        <div class="detail-boy">
+            <div class="detail-close" id="detail-close"></div>
             <div class="swiper-container detail-scroll">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="detail-header">
-                            <h3>金坷垃是的加快d速度sdfaasdadsf框架級啊類似的卡老司機</h3>
-                            <p>
-                                <span><i class="iconfont icon-time"></i>53分鐘前</span>
-                                <span><i class="iconfont icon-eye"></i>111</span>
-                            </p>
-                        </div>
-                        <div class="detail-covers">
-                            <div class="swiper-container detail-banner">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="/static/images/u649.png" /></div>
-                                    <div class="swiper-slide"><img src="/static/images/u649.png" /></div>
-                                    <div class="swiper-slide"><img src="/static/images/u649.png" /></div>
-                                    <div class="swiper-slide"><img src="/static/images/u649.png" /></div>
-                                    <div class="swiper-slide"><img src="/static/images/u649.png" /></div>
-                                    <div class="swiper-slide"><img src="/static/images/u649.png" /></div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-                        <div class="detail-prod">
-                            <div class="detail-prod-body">
-                                <h4>搭配商品</h4>
-                                <ul class="prods-list">
-                                    <li>
-                                        <div class="prod-cover">
-                                            <img class="cover" src="/static/images/u651.png" alt="u651">
-                                        </div>
-                                        <p class="prod-name">阿薩德看法拉克的開始的開發開始爛大街艾麗莎</p>
-                                        <div class="prod-price">
-                                            <span>￥4556.00</span>
-                                            <span class="prod-btn">立即购买</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prod-cover">
-                                            <img class="cover" src="/static/images/u651.png" alt="u651">
-                                        </div>
-                                        <p class="prod-name">阿薩德看法拉克的開始的開發開始爛大街艾麗莎</p>
-                                        <div class="prod-price">
-                                            <span>￥4556.00</span>
-                                            <span class="prod-btn">立即购买</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="prod-cover">
-                                            <img class="cover" src="/static/images/u651.png" alt="u651">
-                                        </div>
-                                        <p class="prod-name">阿薩德看法拉克的開始的開發開始爛大街艾麗莎</p>
-                                        <div class="prod-price">
-                                            <span>￥4556.00</span>
-                                            <span class="prod-btn">立即购买</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="detail-comment">
-                            <h4>作品评论(11)</h4>
-                            <ul class="comment-list">
-                                <li>
-                                    <div class="com-avatar">
-                                        <img class="cover" src="/static/images/new_h.jpg" alt="ad">
-                                    </div>
-                                    <div class="com-cont">
-                                        <div class="com-title">
-                                            <span>我的名字</span>
-                                            <span>发表于: 08-30 12:12</span>
-                                        </div>
-                                        <p class="com-infos">
-                                            想的沒
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="comment-more">查看更多评论</div>
+                    <div class="swiper-slide swiper-scroll">
+                        <div class="detail-dom" id="detail-dom">
 
                         </div>
+                        <div class="detail-comment" id="detail-comment">
 
+                        </div>
 
                     </div>
                 </div>
                 <div class="swiper-scrollbar"><div class="swiper-scrollbar-drag"></div></div>
-
             </div>
         </div>
     </div>
@@ -220,7 +137,80 @@
     </script>
 
     <script type="text/html" id="lookDetail">
+        <div class="detail-header">
+            <h3>金坷垃是的加快d速度sdfaasdadsf框架級啊類似的卡老司機</h3>
+            <p>
+                <span><i class="iconfont icon-time"></i>{{look.publishTime}}</span>
+                <span><i class="iconfont icon-eye"></i>{{look.viewNum}}</span>
+            </p>
+        </div>
+        <div class="detail-covers">
+            <div class="swiper-container detail-banner-top">
+                <div class="swiper-wrapper">
+                    {{each banners as banner }}
+                    <div class="swiper-slide"><img src="{{#banner.cover}}" /></div>
+                    {{/each}}
+                </div>
+                <div class="swiper-button-next swiper-button-black"></div>
+                <div class="swiper-button-prev swiper-button-black"></div>
+            </div>
+        </div>
+        <div class="detail-cover-thumbs">
+            <div class="swiper-container detail-banner-thumbs">
+                <div class="swiper-wrapper">
+                    {{each banners as banner }}
+                    <div class="swiper-slide"><img src="{{#banner.thumbsCover}}" /></div>
+                    {{/each}}
+                </div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div>
+        <div class="detail-prod">
+            <div class="detail-prod-body">
+                <h4>搭配商品</h4>
+                <ul class="prods-list">
+                    {{each prducts as product }}
+                    <li>
+                        <div class="prod-cover">
+                            <img class="cover" src="{{#product.cover}}" alt="{{product.name}}" />
+                        </div>
+                        <p class="prod-name">{{product.name}}</p>
+                        <div class="prod-price">
+                            <span>￥{{product.price}}</span>
+                            <span class="prod-btn">立即购买</span>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
 
+    </script>
+
+    <script type="text/html" id="lookComment">
+        <h4>作品评论({{commentNum}})</h4>
+        <ul class="comment-list">
+            {{each comments as comment }}
+            <li>
+                <div class="com-avatar">
+                    <img class="cover" src="{{#comment.avatar}}" alt="{{comment.nickname}}">
+                </div>
+                <div class="com-cont">
+                    <div class="com-title">
+                        <span>{{comment.nickname}}</span>
+                        <span>发表于: {{comment.createTime}}</span>
+                    </div>
+                    <p class="com-infos">
+                        {{comment.content}}
+                    </p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        {{ if commentNum > 3}}
+        <div class="comment-more">查看更多评论</div>
+        {{ /if }}
     </script>
 
 </body>

@@ -14,6 +14,7 @@ $(function(){
 
 
     function getDesignerType(){
+        $('#designer-list').loading();
         $.ajax({
             url: GLOBAL.domain + '/designer/v2/getDesignStyleList',
             type:'POST',
@@ -30,9 +31,13 @@ $(function(){
                     $('#designer-menu').html(html);
                     select.type = designrTypes[0]['typeId']
                     getDesginers();
+                }else{
+                    layer.msg(data.msg);
+                    $('#designer-list').hideLoading();
                 }
             },
             error: function(xhr, type, errorThrown) {
+                $('#designer-list').hideLoading();
                 layer.msg('网络错误',{time:500});
             }
         })
@@ -48,6 +53,7 @@ $(function(){
             },
             type:'post',
             success:function(data){
+                $('#designer-list').hideLoading();
                 if(data.code == 200 && data.data.list.length>0){
                     var designers = [];
                     data.data.list.forEach(function(item){
@@ -64,6 +70,10 @@ $(function(){
                         pageParse(data.data.total);
                     }
                 }
+            },
+            error: function(){
+                $('#designer-list').hideLoading();
+                layer.msg('网络错误！');
             }
         })
     }

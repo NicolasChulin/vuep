@@ -9,35 +9,31 @@ $(function(){
         getLookList(1);
     });
 
-    var mySwiper = new Swiper('.detail-banner', {
-        loop: true,
-        autoplay: 3500,
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        autoplayDisableOnInteraction: false
-    });
-    var swiper = new Swiper('.detail-scroll', {
-        scrollbar: '.swiper-scrollbar',
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        mousewheelControl: true,
-        freeMode: true,
-    });
-
 
     /* event-bind */
     $('#look-list').on('click', '.look-cover', function(){
         var id = $(this).attr('data-id');
-        console.log(id);
-        layer.msg(id, {time: 1000});
+        $('#detail-box').fadeIn();
+        getLookDetail(id);
+        getLookComment(id);
+    });
 
+    $('#detail-close').on('click',function(){
+        $('#detail-box').fadeOut();
+    });
+
+    $('#detail-dom').on('click','.prod-btn', function(){
+        showAppTips();
+    });
+    $('#detail-comment').on('click','.comment-more', function(){
+        showAppTips();
     });
 
 
 
     /* functions */
     function getLookList(page){
+        $('#look-list').loading();
         $.ajax({
             url: GLOBAL.domain + '/look/list',
             data: {
@@ -46,6 +42,7 @@ $(function(){
             },
             type: 'POST',
             success: function(data){
+                $('#look-list').hideLoading();
                 if(data.code==200 && data.data.list.length>0){
                     var looklist = [];
                     data.data.list.forEach(function(item,index){
@@ -62,7 +59,10 @@ $(function(){
                     if(page == 1 && data.data.hasNextPage){
                         pageParse(data.data.total);
                     }
+                }else{
+                    layer.msg(data.msg, {time: 1000});
                 }
+
             },
             error: function(){
                 layer.msg('网络错误',{time:500});
@@ -85,6 +85,7 @@ $(function(){
     }
 
     function getLookDetail(id){
+        $('#detail-dom').loading();
         $.ajax({
             url: GLOBAL.domain + '/look/detail',
             data: {
@@ -92,90 +93,143 @@ $(function(){
             },
             type: 'POST',
             success: function(data){
-                if(data.code==200 && data.data.list.length>0){
-                    var looklist = [];
-                    data.data.list.forEach(function(item,index){
-                        looklist.push({
+                $('#detail-dom').hideLoading();
+                if(data.code==200){
+                    var look = {
+                        likeNum: data.data.likeNum,
+                        publishTime: data.data.publishTime,
+                        viewNum: data.data.viewNum,
+                        commentNum: data.data.commentNum,
+                        likeNum: data.data.likeNum
+                    }
+                    var prducts = [];
+                    data.data.linkList.forEach(function(item){
+                        prducts.push({
                             id: item.id,
-                            cover: getResizeImgUrl(item.cover, 'md'),
-                            description: item.description,
-                            title: item.title
+                            cover: getResizeImgUrl(item.img, 'sm'),
+							description :item.description,
+							name:item.name,
+							statusName:item.statusName,
+			  				memberId :item.memberId,
+			  				marketPrice:item.marketPrice,
+			  				orgPrice:item.orgPrice,
+			  			  	price:item.price,
+                            isDiscount: item.isDiscount
+                        });
+                    });
+                    var banners = [];
+                    data.data.lookDetails.forEach(function(item){
+                        banners.push({
+                            cover: getResizeImgUrl(item.picture, 'md'),
+                            thumbsCover: getSquareImgUrl(getResizeImgUrl(item.picture, 200)),
+							id: item.id,
+							detail: item.detail,
+							sort: item.sort
                         })
                     });
-                    var listDom = template('lookList', {looklist:looklist});
-                    $('#look-list').html(listDom);
 
+                    var listDom = template('lookDetail', {
+                        look: look,
+                        prducts: prducts,
+                        banners: banners
+                    });
+                    $('#detail-dom').html(listDom);
+                    swiperSet();
+                }else{
+                    layer.msg(data.msg, {time: 1000});
                 }
             },
             error: function(){
+                $('#detail-dom').hideLoading();
+                layer.msg('网络错误', {time: 500});
+            }
+        });
+    }
+
+    function getLookComment(id){
+        $('#detail-comment').loading();
+        $.ajax({
+            url: GLOBAL.domain + '/look/commentList',
+            data: {
+                lookId : id,
+				pageNum : 1,
+				pageSize : 3
+            },
+            type: 'POST',
+            success: function(data){
+                $('#detail-comment').hideLoading();
+                if(data.code==200){
+                    var comments = [];
+                    data.data.list.forEach(function(item,index){
+                        var childList=[];
+                        item.childList.forEach(function(item){
+                            childList.push({
+                                name1 : item.author.nickname,
+                                name2 : item.parentAuthor.nickname,
+                                childContent : item.content,
+                                commentId : item.id,
+                            })
+                        });
+                        comments.push({
+                            avatar : getResizeImgUrl(item.author.avatar, 'avatar'),
+                            nickname : item.author.nickname,
+                            createTime : item.createTime,
+                            content : item.content,
+                            commentId : item.id,
+                            childList : childList,
+                            hasChild : childList.length==0?false:true
+                        });
+                    });
+                    var commentDom = template('lookComment', {
+                        commentNum: data.data.total,
+                        comments: comments
+                    });
+                    $('#detail-comment').html(commentDom);
+                    swiperSet();
+                }else{
+                    layer.msg(data.msg, {time: 1000});
+                }
+            },
+            error: function(){
+                $('#detail-comment').hideLoading();
                 layer.msg('网络错误',{time:500});
             }
         });
     }
 
-
-
-
-/*  old code  */
-
-    /*轮播图片幻灯*/
-    var galleryTop = new Swiper('.gallery-top', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 10,
-        loop:true,
-    });
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 10,
-        touchRatio: 0.2,
-        loop:true,
-        slideToClickedSlide: true
-    });
-    galleryTop.params.control = galleryThumbs;
-    galleryThumbs.params.control = galleryTop;
-
-    /* 评论区域*/
-    function keyUP(t){
-        var len = $(t).val().length;
-        if(len > 139){
-            $(t).val($(t).val().substring(0,140));
-        }
+    function getSquareImgUrl(addr){
+        return  addr + ',/crop,x_0,y_0,w_200,h_200';
     }
 
-    /*点击评论创建评论条*/
-    $('.commentAll').on('click','.plBtn',function(){
-        var myDate = new Date();
-        //获取当前年
-        var year=myDate.getFullYear();
-        //获取当前月
-        var month=myDate.getMonth()+1;
-        //获取当前日
-        var date=myDate.getDate();
-        var h=myDate.getHours();       //获取当前小时数(0-23)
-        var m=myDate.getMinutes();     //获取当前分钟数(0-59)
-        if(m<10) m = '0' + m;
-        var s=myDate.getSeconds();
-        if(s<10) s = '0' + s;
-        var now=year+'-'+month+"-"+date+" "+h+':'+m+":"+s;
-        //获取输入内容
-        var oSize = $(this).siblings('.flex-text-wrap').find('.comment-input').val();
-        console.log(oSize);
-        //动态创建评论模块
-        oHtml = '<div class="comment-show-con clearfix"><div class="comment-show-con-img pull-left"><img src="../images/header-img-comment_03.png" alt=""></div> <div class="comment-show-con-list pull-left clearfix"><div class="pl-text clearfix"> <a href="#" class="comment-size-name">David Beckham : </a> <span class="my-pl-con">&nbsp;'+ oSize +'</span> </div> <div class="date-dz"> 发表于:<span class="date-dz-left comment-time">'+now+'</span></div><div class="hf-list-con"></div></div> </div>';
-        if(oSize.replace(/(^\s*)|(\s*$)/g, "") != ''){
-        $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
-        $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value','').siblings('pre').find('span').text('');
-        }
-    });
-    /*滚动条*/
-        var swiper = new Swiper('.swiper-mt', {
-        scrollbar: '.swiper-scrollbar',
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        mousewheelControl: true,
-        freeMode: true
-        });
+    function swiperSet(){
 
+        /* banners */
+        var galleryTop = new Swiper('.detail-banner-top', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
+        });
+        var galleryThumbs = new Swiper('.detail-banner-thumbs', {
+            spaceBetween: 16,
+            centeredSlides: true,
+            slidesPerView: 7,
+            initialSlide:0,
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
+        });
+        galleryTop.params.control = galleryThumbs;
+        galleryThumbs.params.control = galleryTop;
+        /* scroll */
+        var swiper = new Swiper('.detail-scroll', {
+            scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            mousewheelControl: true,
+            slidesPerView: 'auto',
+            freeMode: true,
+            roundLengths : true
+        });
+    }
 
 
 });

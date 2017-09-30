@@ -48,10 +48,9 @@ function getResizeImgUrl(addr, size){
     return  GLOBAL.imgDomain + '/' + address + '?x-oss-process=image/resize,w_' + s;
 }
 
-
 /* app-down */
 function showAppTips(){
-    var div =  ' \
+    var $tips =  $(' \
         <div class="app-tips" id="app-tips"> \
             <div class="app-body"> \
                 <span class="app-close"></span> \
@@ -62,20 +61,66 @@ function showAppTips(){
                 <p>在布偶猫，和最会生活的人做朋友</p> \
             </div> \
         </div> \
-    ';
-    var $tips = $(div);
+    ');
     $('#app-tips').remove();
     $('body').append($tips);
-    $tips.fadeIn().find('.app-body').slideDown();
+    $tips.fadeIn().delay(300).find('.app-body').slideDown();
     $tips.on('click', '.app-close', function(){
-        $tips.fadeOut(500).remove();
+        $tips.fadeOut().delay(300).remove();
     });
 }
 
-$(function(){
-    $('#header-app-down, #cebianApp, #callGuest').on('click', function(){
+function showComIcon(){
+    var $icons = $(' \
+        <div class="list-right-action"> \
+            <ul> \
+                <li id="goUp"></li> \
+                <li id="callGuest"></li> \
+                <li id="cebianApp"></li> \
+            </ul> \
+        </div> \
+    ');
+    $('body').append($icons).on('click','#callGuest', function(){
+        showAppTips();
+    }).on('click','#cebianApp', function(){
         showAppTips();
     });
+    $('body').on('click','#goUp', function(){
+        $('body').animate({
+            'scrollTop':'0'
+        }, 300);
+    });
+    $(document).scroll(function(){
+        var scrollTop = $(document).scrollTop();
+        if(scrollTop>500){
+            $('#goUp').css('visibility','visible');
+        }
+    })
+
+}
+
+/* 通用jq插件 */
+$.fn.extend({
+    loading: function(){
+        return this.each(function(){
+            var load = '<div class="loading"><div class="loading-img"></div></div>';
+            $(this).css('position','relative').append($(load));
+        });
+    },
+    hideLoading: function(){
+        return this.each(function(){
+            $(this).css('position','static').empty();
+        });
+    }
+});
+
+
+$(function(){
+    $('#header-app-down').on('click', function(){
+        showAppTips();
+    });
+
+    showComIcon();
 
     /* header-li actcolor */
     var pageType = $('#pageType').val();
