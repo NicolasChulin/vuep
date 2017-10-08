@@ -64,7 +64,7 @@ function showAppTips(){
     ');
     $('#app-tips').remove();
     $('body').append($tips);
-    $tips.fadeIn().delay(300).find('.app-body').slideDown();
+    $tips.fadeIn().delay(300).find('.app-body').fadeIn();
     $tips.on('click', '.app-close', function(){
         $tips.fadeOut().delay(300).remove();
     });
@@ -85,15 +85,19 @@ function showComIcon(){
     }).on('click','#cebianApp', function(){
         showAppTips();
     });
+
     $('body').on('click','#goUp', function(){
         $('body').animate({
             'scrollTop':'0'
         }, 300);
     });
+
     $(document).scroll(function(){
         var scrollTop = $(document).scrollTop();
-        if(scrollTop>500){
+        if(scrollTop>400){
             $('#goUp').css('visibility','visible');
+        }else{
+            $('#goUp').css('visibility','hidden');
         }
     })
 

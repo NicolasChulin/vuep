@@ -78,6 +78,7 @@ $(function(){
             theme: '#ec9282',
             jump: function(obj, first){
                 if(!first){
+                    $('body').scrollTop(0);
                     getLookList(obj.curr);
                 }
             }
