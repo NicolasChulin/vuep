@@ -2,10 +2,13 @@
     background: #f3f3f3;
 }
 
+.main-bannar{
+    min-width: 1136px;
+    min-height: 355px;
+}
 .main-bannar img{
     display: block;
     width: 100%;
-    min-width: 1136px;
     height: auto;
 }
 

@@ -84,11 +84,9 @@ function showComIcon(){
         showAppTips();
     }).on('click','#cebianApp', function(){
         showAppTips();
-    });
-
-    $('body').on('click','#goUp', function(){
+    }).on('click','#goUp', function(){
         $('body').animate({
-            'scrollTop':'0'
+            'scrollTop':0
         }, 300);
     });
 
